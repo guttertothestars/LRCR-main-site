@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Passion+One&display=swap');
+
+body {
+  cursor: auto;
+}
+a, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a a:hover {
+  cursor: pointer;
+}
+
+/*******************Begin Header****************/
+header {
+  background-color: #3A5392;
+  color: white;
+  display: flex;
+  height: 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-icons {
+  margin: 2% 2% 2% 2%;
+  z-index: 3;
+}
+
+i {
+  padding: 0 25px 0 25px;
+}
+
+nav {
+  flex: 1;
+}
+
+ul.navbar {
+  display: flex;
+  font-family: Dita, sans-serif;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0 20px 0 20px;
+  width: 100%;
+}
+
+li.navbar-items {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+ul.navbar li:last-child {
+  margin-right: 25px;
+}
+
+/**************** Hero Logo ****************/
+.main-logo {
+  /* display: block; */
+  position: relative;
+  top: -50px;
+  left: 100px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  /* padding-top: 4.5%; */
+  width: 50%;
+}
+
+/************* Hero Text *******************/
+.all-hero-text {
+  float: right;
+  font-family: Dita, sans-serif;
+  margin-right: 5%;
+}
+
+.hero-main-text {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 10%;
+  padding-left: 5px;
+}
+
+.hero-main-text p {
+  padding: 0 15px 0 15px;
+}
+
+.hero-subtext {
+  font-family: professor, sans-serif;
+  font-size: 2.5rem;
+}
+
+/************* Instagram Feed **************/
+.instafeed {
+  display: block;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+hr {
+  height: 10px;
+  background-color: #3A5392;
+  margin-bottom: 40px;
+}
+
+.testimonials-heading {
+  font-family: Dita, sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/***************** Testimonials CSS ***********/
+
+*{
+  box-sizing: border-box
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+  color: black;
+}
+.container{
+  background: white;
+  height:100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.testimonial-card{
+  min-height: 400px;
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.3);
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+  margin: 0 5% 0 5%;
+
+}
+.text{
+  padding: 2.2em;
+  line-height: 1.7em;
+  position: relative;
+  font-size: 18px;
+}
+/*.image{
+  background-color:tomato;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background:no-repeat center/cover url(https://images.unsplash.com/photo-1563715992566-7ad5cf5b71d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display:flex;
+  justify-content:center;
+
+}
+/*
+.testimonial-images {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+}
+*/
+.footer{
+  /* background: linear-gradient(90deg, #1a2B96 0%, #d22B96 100%); */
+  background-color: #3A5392;
+  height: 140px;
+  border-radius: 0 0 10px 10px;
+  position:relative;
+
+}
+
+.quote{
+  font-size: 400%;
+  float: right;
+  opacity: .1;
+  transform: rotate(10deg) translate(-10px, -40px);
+ color:#4D3FA3;
+}
+
+.person{
+  color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-size:1.5rem;
+  font-weight: 600;
+}
+/***************** End Testimonials CSS ***********/
+
+
+/*****************Begin Footer****************/
+.footer-main {
+  background-color: #3A5392;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-family: Dita, sans-serif;
+  justify-content: flex-end;
+  height: 40px;
+  padding-right: 5px;
+  width: 98%;
+}
+
+.footer-secondary {
+  background-color: #3A5392;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-family: Dita, sans-serif;
+  justify-content: space-between;
+  height: 40px;
+  padding-right: 5px;
+  width: 98%;
+  margin-bottom: 0;
+}
+/******************End Footer*************/
+
+
+/***************About Page Styling********/
+
+.about-text {
+  font-family: 'Helvetica', sans-serif;
+    color: black;
+    display: block;
+    margin: 5% 10% 5% 10%;
+    line-height: 1.4;
+}
+
+
+#about-pic {
+  width: 35%;
+  height: auto;
+  object-fit: contain;
+  margin-right: 5%;
+  margin-bottom: 5%;
+float: left;
+}
+
+
+/************** Service Page **************/
+
+.service-main {
+  margin: 3%;
+}
