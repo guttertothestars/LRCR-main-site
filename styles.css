@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Passion+One&display=swap');
 
-body {
+html, body {
   cursor: auto;
+  height: 100%;
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+
 a, a:visited, a:active {
     text-decoration: none;
     color: inherit;
@@ -12,7 +21,7 @@ a a:hover {
   cursor: pointer;
 }
 
-/*******************Begin Header****************/
+/*******************Begin Main Header****************/
 header {
   background-color: #3A5392;
   color: white;
@@ -53,6 +62,15 @@ ul.navbar li:last-child {
   margin-right: 25px;
 }
 
+/***** Secondary Header ******/
+
+.secondary-header {
+  font-family: professor, sans-serif;
+  font-size: 2.8rem;
+  margin: 10px 0 0 15px;
+}
+
+
 /**************** Hero Logo ****************/
 .main-logo {
   /* display: block; */
@@ -92,6 +110,12 @@ ul.navbar li:last-child {
   font-size: 2.5rem;
 }
 
+hr {
+    height: 10px;
+    background-color: #3A5392;
+    margin-bottom: 40px;
+}
+
 /************* Instagram Feed **************/
 .instafeed {
   display: block;
@@ -99,19 +123,13 @@ ul.navbar li:last-child {
   padding-bottom: 40px;
 }
 
-hr {
-  height: 10px;
-  background-color: #3A5392;
-  margin-bottom: 40px;
-}
+/***************** Testimonials CSS ***********/
 
-.testimonials-heading {
+.testimonial-heading {
   font-family: Dita, sans-serif;
   text-align: center;
   font-size: 2.5rem;
 }
-
-/***************** Testimonials CSS ***********/
 
 *{
   box-sizing: border-box
@@ -123,7 +141,7 @@ body{
   font-weight: 100;
   color: black;
 }
-.container{
+.testimonial-container{
   background: white;
   height:100vh;
   display: flex;
@@ -143,7 +161,7 @@ body{
   margin: 0 5% 0 5%;
 
 }
-.text{
+.testimonial-text{
   padding: 2.2em;
   line-height: 1.7em;
   position: relative;
@@ -171,7 +189,8 @@ height: 120px;
 border-radius: 50%;
 }
 */
-.footer{
+
+.testimonial-footer{
   /* background: linear-gradient(90deg, #1a2B96 0%, #d22B96 100%); */
   background-color: #3A5392;
   height: 140px;
@@ -201,6 +220,11 @@ border-radius: 50%;
 
 
 /*****************Begin Footer****************/
+
+.footer {
+  flex-shrink: 0;
+}
+
 .footer-main {
   background-color: #3A5392;
   bottom: 0;
@@ -253,4 +277,21 @@ float: left;
 
 .service-main {
   margin: 3%;
+}
+
+
+
+/************ Contact Page ********/
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5% 30%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+form.contact-form-container > * {
+  margin: 10px;
 }
