@@ -5,9 +5,18 @@ html, body {
   height: 100%;
 }
 
+* {
+  box-sizing: border-box
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
+  font-family: Dita, sans-serif;
+  font-weight: 100;
+  color: black;
 }
 
 .content {
@@ -43,7 +52,11 @@ header {
  transform: scale(1.2);
 }
 
-i {
+i.fa-twitter {
+  padding: 0 25px 0 25px;
+}
+
+i.fa-instagram-square {
   padding: 0 25px 0 25px;
 }
 
@@ -72,6 +85,35 @@ li.navbar-items:hover {
 
 ul.navbar li:last-child {
   margin-right: 25px;
+}
+
+.navbar-toggle {
+    justify-content: flex-end;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+
+
+/********* Mobile Nav Bar *****/
+@media (max-width: 768px) {
+  ul.navbar {
+    display: none;
+  }
+
+  li.navbar-items {
+    display: none;
+  }
+.main-logo {
+  display: none;
+}
+
+}
+
+.active {
+  display: block;
 }
 
 /***** Secondary Header ******/
@@ -136,18 +178,6 @@ hr {
   font-family: Professor, sans-serif;
   text-align: center;
   font-size: 3rem;
-}
-
-* {
-  box-sizing: border-box
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Dita, sans-serif;
-  font-weight: 100;
-  color: black;
 }
 
 .testimonial-container {
