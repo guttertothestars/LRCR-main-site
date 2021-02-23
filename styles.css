@@ -83,7 +83,6 @@ ul.navbar li:last-child {
 
 /**************** Hero Logo ****************/
 .main-logo {
-  /* display: block; */
   position: relative;
   top: -50px;
   left: 100px;
@@ -91,7 +90,6 @@ ul.navbar li:last-child {
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
-  /* padding-top: 4.5%; */
   width: 50%;
 }
 
@@ -147,7 +145,7 @@ hr {
 body {
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: Dita, sans-serif;
   font-weight: 100;
   color: black;
 }
@@ -159,7 +157,7 @@ body {
   align-items: flex-start;
   justify-content: space-around;
   box-sizing: border-box;
-  overflow-x: scroll:;
+  overflow-x: scroll;
   overflow-y: scroll;
 }
 
@@ -300,11 +298,12 @@ border-radius: 50%;
 /******************End Footer*************/
 /***************About Page Styling********/
 .about-text {
-  font-family: 'Helvetica', sans-serif;
+  font-family: Dita, sans-serif;
+  font-size: 1.1rem;
   color: black;
   display: block;
   margin: 5% 10% 5% 10%;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 #about-pic {
@@ -317,8 +316,28 @@ border-radius: 50%;
 }
 
 /************** Service Page **************/
+
 .service-main {
-  margin: 3%;
+  width: 75%;
+  margin: auto;
+  font-family: Dita, san-serif;
+}
+
+.h1-service-page, .h2-service-page {
+  font-family: Professor, san-serif;
+ font-size: 210%;
+  text-align: center;
+
+}
+
+.a-service-page:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.a-service-page:visited {
+  color: purple;
+    text-decoration: underline;
 }
 
 /************ Contact Page ********/
