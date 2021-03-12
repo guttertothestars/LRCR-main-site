@@ -15,62 +15,65 @@
   <div class-"content">
     <header>
 
-      <span class="header-icons">
-        <a href="https://www.instagram.com/guttertothestars/" target="_blank" alt="instagram"><i class="fab fa-instagram-square fa-2x"></i></a>
-        <a href="https://twitter.com/PontifixMax" target="_blank" alt="twitter"><i class="fab fa-twitter fa-2x" target="_blank"></i></a>
-      </span>
-
-      <nav>
-        <ul class="navbar">
-          <li class="navbar-items"><a href="about.html">About</a></li>
-          <li class="navbar-items"><a href="service.html">Service</a></li>
-          <li class="navbar-items"><a href="contact.php">Contact</a></li>
-          <li class="navbar-items"><a href="about.html">Shop</a></li>
-        </ul>
+      <nav class="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
           <i class="fas fa-bars"></i>
         </span>
+        <span class="header-icons">
+          <a href="https://www.instagram.com/guttertothestars/" target="_blank" alt="instagram"><i class="fab fa-instagram-square fa-2x"></i></a>
+          <a href="https://twitter.com/PontifixMax" target="_blank" alt="twitter"><i class="fab fa-twitter fa-2x" target="_blank"></i></a>
+        </span>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="about.html" class="nav-links">About</a>
+          </li>
+          <li>
+            <a href="service.html" class="nav-links">Service</a>
+          </li>
+          <li>
+            <a href="contact.php" class="nav-links">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Shop</a>
+          </li>
+        </ul>
       </nav>
 
     </header>
 
-    <main>
-      <div class="logo-div">
-        <img src="images/LRCR-logo.png" alt="company logo" class="main-logo">
+    <main id="front-page">
+      <div class="hero-wrapper">
+        <div class="logo-div">
+          <img src="images/LRCR-logo.png" alt="company logo" class="main-logo">
+        </div>
         <div class="all-hero-text">
-          <span class="hero-main-text">
-            <p>
-              Simple.
-            </p>
-            <p>
-              Reliable.
-            </p>
-            <p>
-              Awesome.
-            </p>
-          </span>
 
-          <br>
           <p>
-            <!-- <span class="hero-subtext"> -->
-            <!-- An elegant repair for a more civilized age -->
-            <!-- </span> -->
+            Simple.
+          </p>
+          <p>
+            Reliable.
+          </p>
+          <p>
+            Awesome.
           </p>
         </div>
       </div>
+
+
+
 
       <!-- SnapWidget -->
 
       <script src="https://snapwidget.com/js/snapwidget.js"></script>
       <iframe src="https://snapwidget.com/embed/913674" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
 
-      <hr>
       <p class="testimonial-heading">
         Laudat
       </p>
 
       <div class="testimonial-container">
-        </p>
+
         <div class="testimonial-card">
           <div class="testimonial-text">Hands down my favorite bike mechanic. I was so excited
             to hear about Little Rome! Service was great and arranging drop off and
@@ -78,57 +81,62 @@
             <i class="fas fa-quote-right quote"></i>
           </div>
 
-
-
           <div class="testimonial-footer">
             <div class="image">
               <!-- <img class="testimonial-images" src="images/amandaB.png" alt="customer headshot"> -->
             </div>
             <h3 class='person'>Amanda</h3>
-
-
           </div>
         </div>
+
         <div class="testimonial-card">
           <div class="testimonial-text">An ace mechanic who has never met a bike he didn't like.
             He is an astute observer and lifelong learner who is always reading up
             on new tech.
-
             <i class="fas fa-quote-right quote"></i>
           </div>
-
-
 
           <div class="testimonial-footer">
             <div class="image">
               <!-- <img class="testimonial-images" src="images/mattM.png" alt="customer headshot"> -->
             </div>
             <h3 class='person'>Matt</h3>
-
-
           </div>
         </div>
+
         <div class="testimonial-card">
           <div class="testimonial-text">Every time I get my bicycle back, I am rewarded with
             attention to detail. Integrity, hard work, and fairness are what I want
             from my mechanics and Walker is a shining example for all others.
-
             <i class="fas fa-quote-right quote"></i>
           </div>
-
-
 
           <div class="testimonial-footer">
             <div class="image">
               <!-- <img class="testimonial-images" src="images/mikeD.png" alt="customer headshot"> -->
             </div>
             <h3 class='person'>Michael</h3>
-
-
           </div>
         </div>
       </div>
 
+      <!--mobile praise boxes -->
+      <div class="testimonial-container-mobile">
+        <div class="testimonial-card-mobile">
+          <h2>Premium Materials</h2>
+          <p>We locally source only the finest iron ore from the nearby copper-smelting hellscape staffed by the finest barbarian slaves from Mercia and Gaul. Guaranteed to rust!</p>
+        </div>
+
+        <div class="testimonial-card-mobile">
+          <h2>Fast Delivery</h2>
+          <p>When you need to gets to cutting you don't have time to wait! We will beat our apprentices absolutely bloody in order to get our product out faster. But we won't beat them so hard that they mistakes. As Dear Emporer said, "Festina Lente"</p>
+        </div>
+
+        <div class="testimonial-card-mobile">
+          <h2>Quality Assurance</h2>
+          <p>Every purchase made is rigorously tested for strength, flexibility, penetration, and edge-retension. If poor worksmanship on one of our weapons gets you killed in one of Rome's endless civil wars we'll replace it for you free of charge! Must return broken weapon to place of purchase to apply. </p>
+        </div>
+      </div>
 
 
     </main>
@@ -165,11 +173,11 @@
   </footer>
   <!-- Interactive Navbar -->
   <script>
-    let navbar = document.getElementById('js-menu');
+    let mainNav = document.getElementById('js-menu');
     let navBarToggle = document.getElementById('js-navbar-toggle');
 
     navBarToggle.addEventListener('click', function() {
-      navbar.classList.toggle('active');
+      mainNav.classList.toggle('active');
     });
   </script>
   <!-- Interactive Navbar -->

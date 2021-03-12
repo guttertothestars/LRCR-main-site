@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Little Rome - Services</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" media="screen and (max-width: 375px)" href="styles-mobile.css" type="text/css">
   <script src="https://kit.fontawesome.com/b3d9e33b66.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.typekit.net/rpo2apn.css">
 </head>
@@ -12,15 +13,26 @@
 <body>
   <header>
 
-    <p class="secondary-header">
-      Little Rome
-    </p>
-    <nav>
-      <ul class="navbar">
-        <li class="navbar-items"><a href="index.html">Home</a></li>
-        <li class="navbar-items"><a href="about.html">About</a></li>
-        <li class="navbar-items"><a href="contact.php">Contact</a></li>
-        <li class="navbar-items"><a href="shop.html">Shop</a></li>
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <p>
+        Little Rome
+      </p>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="index.html" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-links">About</a>
+        </li>
+        <li>
+          <a href="contact.php" class="nav-links">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links">Shop</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -61,6 +73,17 @@
       &copy; ab urbe condita MMDCCLXXIV
     </p>
   </footer>
+
+  <!-- Interactive Navbar -->
+  <script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function() {
+      mainNav.classList.toggle('active');
+    });
+  </script>
+  <!-- Interactive Navbar -->
 </body>
 
 

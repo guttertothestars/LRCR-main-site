@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>Little Rome - About</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" media="screen and (max-width: 375px)" href="styles-mobile.css" type="text/css">
   <script src="https://kit.fontawesome.com/b3d9e33b66.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.typekit.net/rpo2apn.css">
 </head>
@@ -14,72 +15,83 @@
   <div class="content">
 
     <header>
-      <p class="secondary-header">
-        Little Rome
-      </p>
 
-      <nav>
-        <ul class="navbar">
-          <li class="navbar-items"><a href="index.html">Home</a></li>
-          <li class="navbar-items"><a href="service.html">Service</a></li>
-          <li class="navbar-items"><a href="contact.php">Contact</a></li>
-          <li class="navbar-items"><a href="shop.html">Shop</a></li>
+      <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+        <p>
+          Little Rome
+        </p>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="index.html" class="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="service.html" class="nav-links">Service</a>
+          </li>
+          <li>
+            <a href="contact.php" class="nav-links">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Shop</a>
+          </li>
         </ul>
       </nav>
+
     </header>
-    <main class="about">
 
-      <figure>
-        <img id="about-pic" src="images/CEO.jpg" alt="Owner with kid on shoulders">
-      </figure>
-
+    <figure>
+      <img id="about-pic" src="images/CEO.jpg" alt="Owner with kid on shoulders">
+    </figure>
 
 
-      <article class="about-text">
-        <p>
-          <strong>Little Rome is, first and foremost, a family endeavor</strong>
-          that was born when my wife and I lost childcare during COVID. Freelancing
-          gave me the freedom to have a flexible schedule and give my daughter
-          the attention she deserves. ßThat's what I get out of it.
-        </p>
-        <p>
-          I have spent nearly a decade in leadership roles at two, well-known shops
-          in Washington, DC. However, my love for bicycles started in the unlikeliest
-          of cities: my hometown, the car-centric Houston. The spark for bicycle repair
-          began when I got a flat four miles from home (in the Texas July heat!).
-          When I moved to DC, I joined the team at The Bike Rack in Logan Circle as
-          the Service Manager.
-        </p>
-        <p>
-          At The Bike Rack, major accomplishments included managing up to twelve
-          fellow mechanics, supporting the opening of a second location, redesigning
-          the interior layout to reflect industry trends towards repair-focused shops,
-          and maximizing revenue while developing close relationships with loyal
-          customers. <strong>Many of these individuals made Little Rome possible.
-          </strong> Just before COVID, I was the Service Manager at Conte's Bike
-          Shop, a full-service, multi-city bike retailer that took over The Bike
-          Rack’s Logan Circle location.
-        </p>
-        <p>
-          Throughout the years, I have seen it all, from pre-war, three speeds to
-          World-Tour level race machines — sometimes one right after the other.
-          <strong>I believe that bicycles transform people’s lives. My interests are reliable
-            wheel builds, frame up custom builds, and maintenance of high-mileage
-            bicycles for people who love to ride.</strong> I am a member of the Professional
-          Bicycle Mechanics Association and Shimano S-TEC certified.
-        </p>
-        <p>
-          Now, the team includes my toddler who knows that Papa “loves fixing things,”
-          my cats who may occasionally sniff your wheels, and my wife who pitches
-          in as a wordsmith. <strong>Little Rome allows me to do the work that made me
-            fall in love with being a mechanic: uninterrupted, unhurried, and tailored to
-            your needs.</strong> And the name is a nod to Brookland, the DC neighborhood
-          where we live.
-        </p>
-        <p>
-          To sum up, I get to be your bicycle’s advocate. That's what you get out of it.
-        </p>
-      </article>
+
+    <article class="about-text">
+      <p>
+        <strong>Little Rome is, first and foremost, a family endeavor</strong>
+        that was born when my wife and I lost childcare during COVID. Freelancing
+        gave me the freedom to have a flexible schedule and give my daughter
+        the attention she deserves. ßThat's what I get out of it.
+      </p>
+      <p>
+        I have spent nearly a decade in leadership roles at two, well-known shops
+        in Washington, DC. However, my love for bicycles started in the unlikeliest
+        of cities: my hometown, the car-centric Houston. The spark for bicycle repair
+        began when I got a flat four miles from home (in the Texas July heat!).
+        When I moved to DC, I joined the team at The Bike Rack in Logan Circle as
+        the Service Manager.
+      </p>
+      <p>
+        At The Bike Rack, major accomplishments included managing up to twelve
+        fellow mechanics, supporting the opening of a second location, redesigning
+        the interior layout to reflect industry trends towards repair-focused shops,
+        and maximizing revenue while developing close relationships with loyal
+        customers. <strong>Many of these individuals made Little Rome possible.
+        </strong> Just before COVID, I was the Service Manager at Conte's Bike
+        Shop, a full-service, multi-city bike retailer that took over The Bike
+        Rack’s Logan Circle location.
+      </p>
+      <p>
+        Throughout the years, I have seen it all, from pre-war, three speeds to
+        World-Tour level race machines — sometimes one right after the other.
+        <strong>I believe that bicycles transform people’s lives. My interests are reliable
+          wheel builds, frame up custom builds, and maintenance of high-mileage
+          bicycles for people who love to ride.</strong> I am a member of the Professional
+        Bicycle Mechanics Association and Shimano S-TEC certified.
+      </p>
+      <p>
+        Now, the team includes my toddler who knows that Papa “loves fixing things,”
+        my cats who may occasionally sniff your wheels, and my wife who pitches
+        in as a wordsmith. <strong>Little Rome allows me to do the work that made me
+          fall in love with being a mechanic: uninterrupted, unhurried, and tailored to
+          your needs.</strong> And the name is a nod to Brookland, the DC neighborhood
+        where we live.
+      </p>
+      <p>
+        To sum up, I get to be your bicycle’s advocate. That's what you get out of it.
+      </p>
+    </article>
     </main>
   </div>
 
@@ -92,6 +104,16 @@
     </p>
   </footer>
 
+  <!-- Interactive Navbar -->
+  <script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function() {
+      mainNav.classList.toggle('active');
+    });
+  </script>
+  <!-- Interactive Navbar -->
 </body>
 
 </html>

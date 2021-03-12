@@ -1,3 +1,6 @@
+/* #933990 */
+933990
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Passion+One&display=swap');
 
 html, body {
@@ -5,9 +8,9 @@ html, body {
   height: 100%;
 }
 
+}
 * {
-  box-sizing: border-box
-  margin: 0;
+  box-sizing: border-box margin: 0;
   padding: 0;
 }
 
@@ -32,15 +35,35 @@ a a:hover {
   cursor: pointer;
 }
 
-/*******************Begin Main Header****************/
-header {
+/******************* Main Header****************/
+.navbar {
   background-color: #3A5392;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links {
   color: white;
-  display: flex;
-  height: 80px;
-  top: 0;
-  left: 0;
-  width: 100%;
+  font-family: professor, sans-serif;
+  font-size: 2.4rem;
+}
+
+.nav-links:hover {
+  transform: scale(1.2);
+}
+
+.nav-links:visited {
+  color: white;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+  font-family: professor, sans-serif;
 }
 
 .header-icons {
@@ -49,128 +72,113 @@ header {
 }
 
 .header-icons:hover {
- transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 i.fa-twitter {
   padding: 0 25px 0 25px;
+  color: white;
 }
 
 i.fa-instagram-square {
   padding: 0 25px 0 25px;
+  color: white;
 }
 
-nav {
-  flex: 1;
+nav>p {
+  color: white;
+  font-family: professor, sans-serif;
+  font-size: 2.8rem;
+  margin-left: 15px;
 }
 
-ul.navbar {
-  display: flex;
-  font-family: Dita, sans-serif;
-  justify-content: flex-end;
-  list-style-type: none;
-  padding: 0 20px 0 20px;
-  width: 100%;
-}
-
-li.navbar-items {
-  font-size: 1.2rem;
-  padding: 1rem 2rem 1rem 2rem;
-}
-
-li.navbar-items:hover {
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-ul.navbar li:last-child {
-  margin-right: 25px;
+nav>p:hover {
+  transform: scale(1.2);
 }
 
 .navbar-toggle {
-    justify-content: flex-end;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255,255,255,0.8);
-    font-size: 24px;
-}
-
-
-/********* Mobile Nav Bar *****/
-@media (max-width: 768px) {
-  ul.navbar {
-    display: none;
-  }
-
-  li.navbar-items {
-    display: none;
-  }
-.main-logo {
-  display: none;
-}
-
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
 }
 
 .active {
   display: block;
 }
 
-/***** Secondary Header ******/
-.secondary-header {
-  font-family: Professor, sans-serif;
-  font-size: 2.8rem;
-  margin: 10px 0 0 15px;
+@media screen and (min-width: 900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 100px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .nav-links:hover {
+    transform: scale(1.2);
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
 }
 
-/**************** Hero Logo ****************/
-.main-logo {
-  position: relative;
-  top: -50px;
-  left: 100px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 500px;
-  width: 50%;
-}
 
-/************* Hero Text *******************/
-.all-hero-text {
-  float: right;
-  font-family: Dita, sans-serif;
-  margin-right: 5%;
-}
-
-.hero-main-text {
+/* end media query */
+/**************** Hero Section ****************/
+.hero-wrapper {
   display: flex;
-  justify-content: space-evenly;
-  font-size: 3.6rem;
-  font-weight: bold;
-  margin-top: 14%;
-  padding-left: 8px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
-.hero-main-text p {
-  padding: 0 10px 0 15px;
+.logo-div {
+  flex-basis: 45%;
+  /* border-style: solid; */
 }
 
-.hero-subtext {
-  font-family: professor, sans-serif;
-  font-size: 2.5rem;
+.main-logo {
+  width: 100%;
+  height: auto;
 }
 
-hr {
-  height: 10px;
-  background-color: #3A5392;
-  margin-bottom: 40px;
+.all-hero-text {
+  flex-basis: 35%;
+  /* border-style: solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Dita, sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 /************* Instagram Feed **************/
 .instafeed {
   display: block;
   margin: auto;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 /***************** Testimonials CSS ***********/
@@ -178,7 +186,9 @@ hr {
   font-family: Professor, sans-serif;
   text-align: center;
   font-size: 3rem;
-}
+  border-top: 10px solid #3A5392;
+  margin: 1%;
+ }
 
 .testimonial-container {
   background: white;
@@ -258,6 +268,29 @@ border-radius: 50%;
   font-weight: 600;
 }
 
+@media screen and (max-width: 800px) {
+  .testimonial-container {
+    display:none;
+  }
+
+  .testimonial-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .testimonial-card-mobile {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  margin: 20px;
+  width: 70%;
+  border: 5px solid #3A5392;
+  border-radius: 0 0 10px 10px;
+  padding: auto;
+  }
+}
+
 /***************** End Testimonials CSS ***********/
 /*****************Begin Footer****************/
 .footer {
@@ -326,10 +359,11 @@ border-radius: 50%;
 }
 
 /******************End Footer*************/
+
 /***************About Page Styling********/
 .about-text {
   font-family: Dita, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: black;
   display: block;
   margin: 5% 10% 5% 10%;
@@ -346,18 +380,16 @@ border-radius: 50%;
 }
 
 /************** Service Page **************/
-
 .service-main {
-  width: 75%;
+  width: 70%;
   margin: auto;
   font-family: Dita, san-serif;
 }
 
 .h1-service-page, .h2-service-page {
   font-family: Professor, san-serif;
- font-size: 210%;
+  font-size: 210%;
   text-align: center;
-
 }
 
 .a-service-page:link {
@@ -367,7 +399,7 @@ border-radius: 50%;
 
 .a-service-page:visited {
   color: purple;
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /************ Contact Page ********/

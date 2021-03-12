@@ -29,18 +29,28 @@ if($_POST["submit"]) {
 <body>
   <div class="content">
     <header>
-      <p class="secondary-header">
-        Little Rome
-      </p>
-
-      <nav>
-        <ul class="navbar">
-          <li class="navbar-items"><a href="index.html">Home</a></li>
-          <li class="navbar-items"><a href="service.html">Service</a></li>
-          <li class="navbar-items"><a href="contact.php">Contact</a></li>
-          <li class="navbar-items"><a href="shop.html">Shop</a></li>
+      <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <p>
+          Little Rome
+        </p>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="about.html" class="nav-links">About</a>
+            </li>
+            <li>
+                <a href="service.html" class="nav-links">Service</a>
+            </li>
+            <li>
+                <a href="contact.php" class="nav-links">Contact</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Shop</a>
+            </li>
         </ul>
-      </nav>
+    </nav>
     </header>
 
     <?=$thankYou ?>
